@@ -22,7 +22,7 @@ struct ContentView: View {
                 })
                 .padding()
             }
-            .navigationBarTitle("Cooperation Criteria")
+            .navigationBarTitle("Question \(currentIndex + 1) of \(CooperationCriteria.criteriaList.count + 1)")
         }
     }
 }
