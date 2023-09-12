@@ -14,6 +14,11 @@
 		D60E79242AB0443700C3393F /* CooperationStationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E79232AB0443700C3393F /* CooperationStationTests.swift */; };
 		D60E792E2AB0443700C3393F /* CooperationStationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E792D2AB0443700C3393F /* CooperationStationUITests.swift */; };
 		D60E79302AB0443700C3393F /* CooperationStationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E792F2AB0443700C3393F /* CooperationStationUITestsLaunchTests.swift */; };
+		D60E793D2AB0445300C3393F /* CooperationCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E793C2AB0445300C3393F /* CooperationCriteria.swift */; };
+		D60E79412AB0467300C3393F /* ResponseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E79402AB0467300C3393F /* ResponseStore.swift */; };
+		D60E79442AB0581D00C3393F /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E79432AB0581D00C3393F /* RatingView.swift */; };
+		D60E79462AB058AA00C3393F /* ResponseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E79452AB058AA00C3393F /* ResponseView.swift */; };
+		D60E79482AB0591200C3393F /* CriteriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E79472AB0591200C3393F /* CriteriaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		D60E79292AB0443700C3393F /* CooperationStationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CooperationStationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60E792D2AB0443700C3393F /* CooperationStationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CooperationStationUITests.swift; sourceTree = "<group>"; };
 		D60E792F2AB0443700C3393F /* CooperationStationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CooperationStationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D60E793C2AB0445300C3393F /* CooperationCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CooperationCriteria.swift; sourceTree = "<group>"; };
+		D60E79402AB0467300C3393F /* ResponseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStore.swift; sourceTree = "<group>"; };
+		D60E79432AB0581D00C3393F /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		D60E79452AB058AA00C3393F /* ResponseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseView.swift; sourceTree = "<group>"; };
+		D60E79472AB0591200C3393F /* CriteriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriteriaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,9 @@
 			children = (
 				D60E79122AB0443400C3393F /* CooperationStationApp.swift */,
 				D60E79142AB0443400C3393F /* ContentView.swift */,
+				D60E79422AB0580B00C3393F /* Views */,
+				D60E793C2AB0445300C3393F /* CooperationCriteria.swift */,
+				D60E79402AB0467300C3393F /* ResponseStore.swift */,
 				D60E79162AB0443700C3393F /* Assets.xcassets */,
 				D60E79182AB0443700C3393F /* Preview Content */,
 			);
@@ -125,6 +138,16 @@
 				D60E792F2AB0443700C3393F /* CooperationStationUITestsLaunchTests.swift */,
 			);
 			path = CooperationStationUITests;
+			sourceTree = "<group>";
+		};
+		D60E79422AB0580B00C3393F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D60E79432AB0581D00C3393F /* RatingView.swift */,
+				D60E79452AB058AA00C3393F /* ResponseView.swift */,
+				D60E79472AB0591200C3393F /* CriteriaView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +280,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D60E79412AB0467300C3393F /* ResponseStore.swift in Sources */,
+				D60E793D2AB0445300C3393F /* CooperationCriteria.swift in Sources */,
 				D60E79152AB0443400C3393F /* ContentView.swift in Sources */,
+				D60E79482AB0591200C3393F /* CriteriaView.swift in Sources */,
+				D60E79442AB0581D00C3393F /* RatingView.swift in Sources */,
 				D60E79132AB0443400C3393F /* CooperationStationApp.swift in Sources */,
+				D60E79462AB058AA00C3393F /* ResponseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

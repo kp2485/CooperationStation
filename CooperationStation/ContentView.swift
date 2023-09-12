@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var currentIndex: Int = 0
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                CriteriaView(criteria: CooperationCriteria.criteriaList[currentIndex])
+
+                Button(action: {
+                    currentIndex = (currentIndex + 1) % CooperationCriteria.criteriaList.count
+                }, label: {
+                    Text("Next")
+                })
+                .padding()
+            }
+            .navigationBarTitle("Cooperation Criteria")
         }
-        .padding()
     }
 }
 
