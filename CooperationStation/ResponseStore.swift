@@ -9,16 +9,7 @@ import Foundation
 
 class ResponseStore: ObservableObject {
     
-    var criteriaRatingsAndResponses: [CooperationCriteria: (rating: Int, response: String?)] = [
-        .objectiveMetrics(.taskCompletion): (5, nil),
-        .objectiveMetrics(.attendanceParticipation): (4, "Attendance has been good."),
-        .objectiveMetrics(.conflictResolution): (3, "Some conflicts were resolved."),
-        .communication(.openHonestCommunication): (5, "Great communication within the group."),
-        .communication(.activeListening): (4, nil),
-        .rolesResponsibilities(.clearRoleAllocation): (4, "Roles are well-defined."),
-        .rolesResponsibilities(.accountability): (3, "Some members need to be more accountable.")
-        // Add other criteria, ratings, and responses here...
-    ]
+    @Published var criteriaRatingsAndResponses: [CooperationCriteria: (rating: Int, response: String?)] = [:]
     
     // Function to print criteria, descriptions, and ratings
     func printCriteriaRatingsAndResponses() {

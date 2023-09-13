@@ -16,9 +16,8 @@
 		D60E79302AB0443700C3393F /* CooperationStationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E792F2AB0443700C3393F /* CooperationStationUITestsLaunchTests.swift */; };
 		D60E793D2AB0445300C3393F /* CooperationCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E793C2AB0445300C3393F /* CooperationCriteria.swift */; };
 		D60E79412AB0467300C3393F /* ResponseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E79402AB0467300C3393F /* ResponseStore.swift */; };
-		D60E79442AB0581D00C3393F /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E79432AB0581D00C3393F /* RatingView.swift */; };
-		D60E79462AB058AA00C3393F /* ResponseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E79452AB058AA00C3393F /* ResponseView.swift */; };
 		D60E79482AB0591200C3393F /* CriteriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E79472AB0591200C3393F /* CriteriaView.swift */; };
+		D60E794B2AB1A30200C3393F /* Array+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60E794A2AB1A30200C3393F /* Array+Safe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,9 +50,8 @@
 		D60E792F2AB0443700C3393F /* CooperationStationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CooperationStationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D60E793C2AB0445300C3393F /* CooperationCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CooperationCriteria.swift; sourceTree = "<group>"; };
 		D60E79402AB0467300C3393F /* ResponseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStore.swift; sourceTree = "<group>"; };
-		D60E79432AB0581D00C3393F /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
-		D60E79452AB058AA00C3393F /* ResponseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseView.swift; sourceTree = "<group>"; };
 		D60E79472AB0591200C3393F /* CriteriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriteriaView.swift; sourceTree = "<group>"; };
+		D60E794A2AB1A30200C3393F /* Array+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Safe.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +104,7 @@
 			children = (
 				D60E79122AB0443400C3393F /* CooperationStationApp.swift */,
 				D60E79142AB0443400C3393F /* ContentView.swift */,
+				D60E79492AB1A2DF00C3393F /* Extensions */,
 				D60E79422AB0580B00C3393F /* Views */,
 				D60E793C2AB0445300C3393F /* CooperationCriteria.swift */,
 				D60E79402AB0467300C3393F /* ResponseStore.swift */,
@@ -143,11 +142,17 @@
 		D60E79422AB0580B00C3393F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D60E79432AB0581D00C3393F /* RatingView.swift */,
-				D60E79452AB058AA00C3393F /* ResponseView.swift */,
 				D60E79472AB0591200C3393F /* CriteriaView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D60E79492AB1A2DF00C3393F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D60E794A2AB1A30200C3393F /* Array+Safe.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,13 +285,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D60E794B2AB1A30200C3393F /* Array+Safe.swift in Sources */,
 				D60E79412AB0467300C3393F /* ResponseStore.swift in Sources */,
 				D60E793D2AB0445300C3393F /* CooperationCriteria.swift in Sources */,
 				D60E79152AB0443400C3393F /* ContentView.swift in Sources */,
 				D60E79482AB0591200C3393F /* CriteriaView.swift in Sources */,
-				D60E79442AB0581D00C3393F /* RatingView.swift in Sources */,
 				D60E79132AB0443400C3393F /* CooperationStationApp.swift in Sources */,
-				D60E79462AB058AA00C3393F /* ResponseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

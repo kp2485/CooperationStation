@@ -10,21 +10,49 @@ import SwiftUI
 
 struct CriteriaView: View {
     var criteria: CooperationCriteria
-
-    @State private var rating: Int = 5
-    @State private var response: String = ""
+    @Binding var rating: Int
+    @Binding var response: String
 
     var body: some View {
-        VStack {
-            Text(criteriaName)
+        VStack(alignment: .leading, spacing: 10) {
+            
+            Text("Category: \(criteriaCategory)")
+            
+            Text("Criteria: \(criteriaName)")
             
             Text(criteriaDescription)
 
-            RatingView(rating: $rating)
+            Stepper(value: $rating, in: 1...10, label: {
+                Text("Rating: \(rating)")
+            })
 
-            ResponseView(response: $response)
+            TextField("Thoughts...", text: $response)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
         }
         .padding()
+    }
+    
+    private var criteriaCategory: String {
+        switch criteria {
+        case .objectiveMetrics(_):
+            return "Objective Metrics"
+        case .communication(_):
+            return "Communication"
+        case .rolesResponsibilities(_):
+            return "Roles and Responsibilities"
+        case .conflictProblemSolving(_):
+            return "Conflict and Problem Solving"
+        case .trustRespect(_):
+            return "Trust and Respect"
+        case .groupDynamics(_):
+            return "Group Dynamics"
+        case .feedbackEvaluation:
+            return "Feedback and Evaluation"
+        case .goalAlignment(_):
+            return "Goal Alignment"
+        case .culturalContextual(_):
+            return "Cultural/Contextual"
+        }
     }
 
     private var criteriaName: String {
