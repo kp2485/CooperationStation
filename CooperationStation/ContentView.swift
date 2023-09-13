@@ -22,18 +22,28 @@ struct ContentView: View {
                     rating: $rating,
                     response: $response)
 
-                Button(action: {
-                    if let criteria = CooperationCriteria.criteriaList[safe: currentIndex] {
-                        responseStore.criteriaRatingsAndResponses[criteria] = (rating: rating, response: response.isEmpty ? nil : response)
-                        currentIndex = (currentIndex + 1) % CooperationCriteria.criteriaList.count
-                        rating = 5
-                        response = ""
-                    }
-                }, label: {
-                    Text("Next")
-                })
-                .padding()
+                HStack {
+                    Button(action: {
+                        if currentIndex > 0 {
+                            currentIndex -= 1
+                            updateRatingAndResponse()
+                        }
+                    }, label: {
+                        Text("Previous")
+                    })
+                    .padding()
 
+                    Button(action: {
+                        if currentIndex < CooperationCriteria.criteriaList.count {
+                            responseStore.criteriaRatingsAndResponses[CooperationCriteria.criteriaList[currentIndex]] = (rating: rating, response: response.isEmpty ? nil : response)
+                            currentIndex += 1
+                            updateRatingAndResponse()
+                        }
+                    }, label: {
+                        Text("Next")
+                    })
+                    .padding()
+                }
                 
                 Spacer()
             }
@@ -41,7 +51,20 @@ struct ContentView: View {
             .padding()
         }
     }
+
+    private func updateRatingAndResponse() {
+        let criteria = CooperationCriteria.criteriaList[currentIndex]
+        if let storedResponse = responseStore.criteriaRatingsAndResponses[criteria] {
+            rating = storedResponse.rating
+            response = storedResponse.response ?? ""
+        } else {
+            rating = 5
+            response = ""
+        }
+    }
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
